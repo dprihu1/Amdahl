@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  amdahl-analyzer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: amdahl-analyzer:latest
+    container_name: amdahl-analyzer
+    volumes:
+      # Mount output directory to host for accessing generated plots
+      - ./output:/app/output
+      # Mount config file if you want to override (optional)
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MPLBACKEND=Agg
+    # Override default entrypoint with custom arguments if needed
+    # command: ["python", "cli.py", "--fraction", "0.05", "--max_procs", "100"]
+

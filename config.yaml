@@ -1,0 +1,14 @@
+# Amdahl's Law Performance Analyzer Configuration File
+
+# Fraction of the program that is sequential (0 <= fraction <= 1)
+fraction: 0.05
+
+# Maximum number of processors to simulate
+max_procs: 100
+
+# Output directory for generated plots (relative to project root or current working directory)
+output_dir: "./output"
+
+# Whether to generate plots (true/false)
+generate_plots: true
+
