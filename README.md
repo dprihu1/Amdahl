@@ -18,7 +18,7 @@ This project provides an interactive and automated utility for evaluating perfor
 ## 🏗️ System Architecture
 
 ```
-Cython/
+Amdahl/
 ├── amdahl.py              # Core computation functions (speedup, efficiency, execution time)
 ├── visualize.py           # Matplotlib plotting functions
 ├── cli.py                 # Main CLI entry point (runs via Docker or directly)
